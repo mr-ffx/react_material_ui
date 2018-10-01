@@ -18,7 +18,6 @@ const AppWrapper = styled.div`
   width: 100%;
   display: flex;
   min-height: 100%;
-  background-color: lightblue;
   flex-direction: column;
 `;
 

@@ -1,4 +1,4 @@
-# rbcp3-playground
+# react_material_ui
 
 This project's purpose is to recreate a page with React and Material UI.
 

@@ -7,6 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import HeaderImage from 'components/HeaderImage';
 import Navigation from 'components/Navigation';
+import LanguageSwitch from 'components/LanguageSwitch';
 import RedButton from 'components/RedButton';
 import styles from './styles';
 
@@ -21,6 +22,7 @@ function Header(props) {
         <Toolbar className={classes.toolBar}>
           <HeaderImage />
           <Navigation />
+          <LanguageSwitch />
           <RedButton link={MyLink} text="contact us" />
         </Toolbar>
       </AppBar>

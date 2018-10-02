@@ -12,12 +12,12 @@ import styles from './styles';
 
 /* eslint-disable react/prefer-stateless-function */
 function NewsDescription(props) {
-  const { classes, title, text, hashtag } = props;
+  const { classes, news } = props;
   return (
     <Paper className={classes.description} elevation={0} square={true}>
-      <HashTag color="#db0a40" text={hashtag} />
-      <NewsTitle text={title} />
-      <NewsParagraph text={text} />
+      <HashTag color="#db0a40" text={news.hashtag} />
+      <NewsTitle text={news.title} />
+      <NewsParagraph text={news.text} />
       <RedButton text="read more" />
     </Paper>
   );
@@ -25,15 +25,11 @@ function NewsDescription(props) {
 
 NewsDescription.propTypes = {
   classes: PropTypes.object.isRequired,
-  hashtag: PropTypes.string,
-  text: PropTypes.string,
-  title: PropTypes.string,
+  news: PropTypes.object,
 };
 
 NewsDescription.defaultProps = {
-  hashtag: '',
-  text: '',
-  title: '',
+  news: {},
 };
 
 export default withStyles(styles)(NewsDescription);

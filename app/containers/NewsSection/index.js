@@ -27,32 +27,16 @@ function NewsSection() {
         <NewsImage img={fourth} />
       </Grid>
       <Grid item xs={3}>
-        <NewsDescription
-          hashtag={texts[0].hashtag}
-          title={texts[0].title}
-          text={texts[0].text}
-        />
+        <NewsDescription news={texts[0]} />
       </Grid>
       <Grid item xs={3}>
-        <NewsDescription
-          hashtag={texts[1].hashtag}
-          title={texts[1].title}
-          text={texts[1].text}
-        />
+        <NewsDescription news={texts[1]} />
       </Grid>
       <Grid item xs={3}>
-        <NewsDescription
-          hashtag={texts[2].hashtag}
-          title={texts[2].title}
-          text={texts[2].text}
-        />
+        <NewsDescription news={texts[2]} />
       </Grid>
       <Grid item xs={3}>
-        <NewsDescription
-          hashtag={texts[3].hashtag}
-          title={texts[3].title}
-          text={texts[3].text}
-        />
+        <NewsDescription news={texts[3]} />
       </Grid>
     </Grid>
   );

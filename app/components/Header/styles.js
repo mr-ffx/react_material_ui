@@ -3,6 +3,7 @@ const styles = {
     width: '100%',
     height: '4.5em',
     zIndex: '1000',
+    position: 'fixed',
     boxSizing: 'border-box', // Prevent padding issue with the Modal and fixed positioned AppBar.
   },
   appBar: {

@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledH1 from './StyledH1';
+import StyledTitle from './StyledTitle';
 
 /* eslint-disable react/prefer-stateless-function */
-function H1(props) {
+function NewsTitle(props) {
   const { text } = props;
-  return <StyledH1>{text}</StyledH1>;
+  return <StyledTitle>{text}</StyledTitle>;
 }
 
-H1.propTypes = {
+NewsTitle.propTypes = {
   text: PropTypes.string,
 };
 
-H1.defaultProps = {
+NewsTitle.defaultProps = {
   text: '',
 };
 
-export default H1;
+export default NewsTitle;

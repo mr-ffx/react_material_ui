@@ -11,6 +11,12 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Helmet } from 'react-helmet';
 import H1 from 'components/H1';
+import RedButton from 'components/RedButton';
+import HashTag from 'components/HashTag';
+import Headline from 'components/Headline';
+import NewsParagraph from 'components/NewsParagraph';
+import NewsTitle from 'components/NewsTitle';
+import { texts, headline } from 'utils/helper';
 
 const styles = {
   root: {
@@ -40,14 +46,14 @@ const styles = {
     width: '33.75em',
     height: '14.5em',
     padding: '24px 32px',
-    border: '1px solid black',
     backgroundColor: 'transparent',
   },
   headlineDesc: {
+    display: 'flex',
+    flexDirection: 'column',
     width: '21.875em',
     height: '14.5em',
     padding: '24px 32px 34px',
-    border: '1px solid black',
     backgroundColor: 'transparent',
   },
   image: {
@@ -57,9 +63,11 @@ const styles = {
   description: {
     height: '18.375em',
     padding: '24px 20px 24px 24px',
-    border: '1px solid black',
+    marginTop: '-10px',
   },
 };
+
+const section = 'News';
 
 /* eslint-disable react/prefer-stateless-function */
 function HomePage(props) {
@@ -76,7 +84,7 @@ function HomePage(props) {
       <Grid container spacing={0} className={classes.row}>
         <Grid item xs={3}>
           <Paper className={classes.heading} elevation={0} square={true}>
-            <H1>News</H1>
+            <H1 text={section} />
           </Paper>
         </Grid>
         <Grid
@@ -87,12 +95,14 @@ function HomePage(props) {
         >
           <Grid item>
             <Paper className={classes.headline} elevation={0} square={true}>
-              Headline
+              <HashTag color="#fff" text="gaming" />
+              <Headline text={headline.title} color="#fff" />
             </Paper>
           </Grid>
           <Grid item>
             <Paper className={classes.headlineDesc} elevation={0} square={true}>
-              Text
+              <NewsParagraph text={headline.text} color="#fff" />
+              <RedButton text="read more" />
             </Paper>
           </Grid>
         </Grid>
@@ -112,22 +122,34 @@ function HomePage(props) {
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.description} elevation={0} square={true}>
-            xs=3
+            <HashTag color="#db0a40" text="gaming" />
+            <NewsTitle text={texts[0].title} />
+            <NewsParagraph text={texts[0].text} />
+            <RedButton text="read more" />
           </Paper>
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.description} elevation={0} square={true}>
-            xs=3
+            <HashTag color="#db0a40" text="partnership" />
+            <NewsTitle text={texts[1].title} />
+            <NewsParagraph text={texts[1].text} />
+            <RedButton text="read more" />
           </Paper>
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.description} elevation={0} square={true}>
-            xs=3
+            <HashTag color="#db0a40" text="partnership" />
+            <NewsTitle text={texts[2].title} />
+            <NewsParagraph text={texts[2].text} />
+            <RedButton text="read more" />
           </Paper>
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.description} elevation={0} square={true}>
-            xs=3
+            <HashTag color="#db0a40" text="innovation" />
+            <NewsTitle text={texts[3].title} />
+            <NewsParagraph text={texts[3].text} />
+            <RedButton text="read more" />
           </Paper>
         </Grid>
       </Grid>

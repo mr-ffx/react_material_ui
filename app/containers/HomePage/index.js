@@ -5,8 +5,8 @@
  */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import HeroSection from 'components/HeroSection';
-import NewsSection from 'components/NewsSection';
+import HeroSection from 'containers/HeroSection';
+import NewsSection from 'containers/NewsSection';
 import HomeWrapper from './HomeWrapper';
 
 /* eslint-disable react/prefer-stateless-function */

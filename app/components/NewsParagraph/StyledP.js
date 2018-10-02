@@ -5,7 +5,7 @@ const StyledP = styled.p`
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow: ${props => (props.overflow ? `${props.overflow}` : 'hidden')};
   height: 96px;
   margin-bottom: 0px;
   font-size: 16px;

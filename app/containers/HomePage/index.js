@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -17,6 +18,11 @@ import Headline from 'components/Headline';
 import NewsParagraph from 'components/NewsParagraph';
 import NewsTitle from 'components/NewsTitle';
 import { texts, headline } from 'utils/helper';
+import heroImg from '../../images/hero_image.jpg';
+import first from '../../images/first_news.jpg';
+import second from '../../images/sec_news.jpg';
+import third from '../../images/third_news.jpg';
+import fourth from '../../images/fourth_news.jpg';
 
 const styles = {
   root: {
@@ -40,7 +46,10 @@ const styles = {
   hero: {
     width: '56.125em',
     height: '23.5em',
-    backgroundColor: 'lightpink',
+    backgroundImage: `url(${heroImg})`,
+    backgroundPosition: '50% 50%',
+    backgroundSize: 'cover',
+    opacity: '0.76',
   },
   headline: {
     width: '33.75em',
@@ -59,6 +68,26 @@ const styles = {
   image: {
     height: '11.5em',
     backgroundColor: 'lightblue',
+  },
+  first: {
+    backgroundImage: `url(${first})`,
+    backgroundPosition: '50% 50%',
+    backgroundSize: 'cover',
+  },
+  second: {
+    backgroundImage: `url(${second})`,
+    backgroundPosition: '50% 50%',
+    backgroundSize: 'cover',
+  },
+  third: {
+    backgroundImage: `url(${third})`,
+    backgroundPosition: '50% 50%',
+    backgroundSize: 'cover',
+  },
+  fourth: {
+    backgroundImage: `url(${fourth})`,
+    backgroundPosition: '50% 50%',
+    backgroundSize: 'cover',
   },
   description: {
     height: '18.375em',
@@ -101,7 +130,11 @@ function HomePage(props) {
           </Grid>
           <Grid item>
             <Paper className={classes.headlineDesc} elevation={0} square={true}>
-              <NewsParagraph text={headline.text} color="#fff" />
+              <NewsParagraph
+                text={headline.text}
+                color="#fff"
+                overflow="visible"
+              />
               <RedButton text="read more" />
             </Paper>
           </Grid>
@@ -109,16 +142,32 @@ function HomePage(props) {
       </Grid>
       <Grid container spacing={8}>
         <Grid item xs={3}>
-          <Paper className={classes.image} elevation={0} square={true} />
+          <Paper
+            className={classNames(classes.image, classes.first)}
+            elevation={0}
+            square={true}
+          />
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.image} elevation={0} square={true} />
+          <Paper
+            className={classNames(classes.image, classes.second)}
+            elevation={0}
+            square={true}
+          />
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.image} elevation={0} square={true} />
+          <Paper
+            className={classNames(classes.image, classes.third)}
+            elevation={0}
+            square={true}
+          />
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.image} elevation={0} square={true} />
+          <Paper
+            className={classNames(classes.image, classes.fourth)}
+            elevation={0}
+            square={true}
+          />
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.description} elevation={0} square={true}>

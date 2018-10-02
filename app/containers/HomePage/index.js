@@ -49,7 +49,6 @@ const styles = {
     backgroundImage: `url(${heroImg})`,
     backgroundPosition: '50% 50%',
     backgroundSize: 'cover',
-    opacity: '0.76',
   },
   headline: {
     width: '33.75em',

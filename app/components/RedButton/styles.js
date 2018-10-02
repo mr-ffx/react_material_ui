@@ -12,7 +12,7 @@ const styles = {
     transition: 'all 250ms ease',
     color: 'hsla(0, 0%, 100%, .96)',
     fontSize: '0.9375em',
-    letteSpacing: '0.5px',
+    letterSpacing: '0.5px',
     maxWidth: '100%',
     boxShadow: 'none',
     '&:hover': {

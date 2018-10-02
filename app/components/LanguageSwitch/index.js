@@ -5,7 +5,7 @@ import { Break, Container, Option } from './Styles';
 function LanguageSwitch() {
   return (
     <Container href="/">
-      <Option>EN</Option>
+      <Option color="rgba(0, 0, 0, .75)">EN</Option>
       <Break>|</Break>
       <Option>DE</Option>
     </Container>

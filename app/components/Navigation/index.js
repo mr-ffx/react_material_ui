@@ -3,17 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextButton from 'components/TextButton';
-
-const styles = {
-  root: {
-    height: '4.5em',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: '1',
-    position: 'relative',
-  },
-};
+import styles from './styles';
 
 const MyLink = props => <Link to="/" {...props} />;
 

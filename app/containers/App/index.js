@@ -12,7 +12,6 @@ import styled from 'styled-components';
 
 import HomePage from 'containers/HomePage/Loadable';
 import Header from 'components/Header';
-import Footer from 'components/Footer';
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -32,7 +31,6 @@ export default function App() {
       </Helmet>
       <Header />
       <HomePage />
-      <Footer />
     </AppWrapper>
   );
 }
